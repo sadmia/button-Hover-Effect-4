@@ -1,0 +1,101 @@
+:root {
+	--bg-color : #fff0;
+	--border-color: #2287F4;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	position: relative;
+	font-family: arial;
+	width: 100%;
+	height: 100vh;
+	background-color: #000;
+}
+
+
+.full-div {
+	width: 161px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.full-div a {
+	position: relative;
+	text-align: center;
+	background-color: var(--bg-color);
+	color: #2287F4;
+	text-decoration: none;
+	padding: 20px 40px;
+	font-size: 25px;
+	box-sizing: border-box;
+	transition: 0.6s;
+	font-weight: bold;
+}
+.full-div a span {}
+
+.full-div a:before {
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: 0px;
+	width: 15%;
+	height: 3px;
+	background-color: var(--border-color);
+	transition: 0.5s;
+}
+
+.full-div a:after {
+	position: absolute;
+	content: '';
+	right: 0px;
+	bottom: 0px;
+	width: 15%;
+	height: 3px;
+	background-color: var(--border-color);
+	transition: 0.5s;
+}
+
+.full-div a span:before {
+	position: absolute;
+	content: '';
+	top: 0px;
+	left: 0px;
+	width: 3px;
+	height: 30%;
+	background-color: var(--border-color);	
+	transition: 0.5s;
+}
+
+.full-div a span:after {
+	position: absolute;
+	content: '';
+	bottom: 0px;
+	right: 0px;
+	width: 3px;
+	height: 30%;
+	background-color: var(--border-color);
+	transition: 0.5s;
+}
+
+
+.btn-aria:hover a:before , .btn-aria:hover a:after  {
+	width: 100%;
+	background-color: #1BEDF2;
+}
+.btn-aria:hover a span:before , .btn-aria:hover a span:after  {
+	height: 100%;
+	background-color: #1BEDF2;
+}
+
+
+.full-div a:hover {
+	background-color: #1BEDF2;
+	color: #000;
+	transition: 0.5s;
+	transition-delay: 0.2s;
+	box-shadow: 0px 0px 50px #1BEDF2;
+}
